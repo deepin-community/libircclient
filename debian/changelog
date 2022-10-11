@@ -1,0 +1,101 @@
+libircclient (1.9-1) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Dariusz Dwornikowski <darek@debian.org>  Mon, 16 May 2022 20:20:45 +0800
+
+libircclient (1.9-1) unstable; urgency=medium
+
+  * New upstream version 1.9
+  * Added libircclient.triggers with ldconfig
+  * Refreshed patches for the new codebase
+  * d/control:
+   - Changed maintainer's email to d.o
+   - Bump standards to 3.9.8, no changes needed
+   - Changed vcs to secure, git browser to cgit
+  * d/copyright:
+    - redefined BSD-3-clause
+    - added year 2016
+    - changed maintainer's email to d.o
+  * Added bindnow hardening
+
+ -- Dariusz Dwornikowski <darek@debian.org>  Tue, 20 Sep 2016 18:25:56 +0200
+
+libircclient (1.8-2) unstable; urgency=medium
+
+  * patch/fix-ipv6-socaddr.patch added (Closes: #762027)
+    - fixes segfault when connecting to an IPv6 address
+
+ -- Dariusz Dwornikowski <dariusz.dwornikowski@cs.put.poznan.pl>  Thu, 18 Sep 2014 15:29:18 +0200
+
+libircclient (1.8-1) unstable; urgency=medium
+
+  * New maintainer (Closes: #674882)
+  * Imported Upstream version 1.8
+  * Removed -dfsg, rfc file violating DFSG no longer in source
+  * Bump standards to 3.9.5, no changes needed
+  * Build-Dep in d/control changed to debhelper>=9
+  * Added myself to d/copyright
+  * d/copyright updated for Authors of cocoa/
+  * d/compat changed to 9
+  * Deleted 00_fix_missing_headers patch, not needed
+  * Added dh-autoreconf to Build-Deps
+  * Switched to multiarch (Thanks Andreas Rönnquist)
+  * patch/proper-lib-building.patch added
+    - removed old build system
+    - uses autoreconf and libtool
+    - still allows using upstream's --enable system
+    - builds libircclient with IPv6 support
+  * removed README.source file, not needed
+  * README.Debian added with URL pointing to upstream's doc
+
+ -- Dariusz Dwornikowski <dariusz.dwornikowski@cs.put.poznan.pl>  Fri, 15 Aug 2014 18:48:38 +0200
+
+libircclient (1.6+dfsg1-1) UNRELEASED; urgency=medium
+
+  [ Andreas Rönnquist ]
+  * Imported Upstream version 1.6+dfsg1
+  * Update Standards Version to 3.9.3 (No changes)
+  * Update Vcs-* fields
+  * Reset executable flag of bootstrap after running it
+  * Convert package to quilt format
+  * Fix debian-rules-missing-recommended-target
+  * Add hardening flags to build system
+  * Fix Multiarch support
+  * Fix binary-control-field-duplicates-source field 'Section'
+  * Fix duplicate short description lintian warning
+  * Fix quilt-patch-missing-description lintian warning
+  * Add symbols file for libircclient1
+  * Update homepage field
+  * Drop installing unneeded .la file
+  * Update Copyright file
+  * Fix closing bug lacking hash sign
+
+ -- Dariusz Dwornikowski <dariusz.dwornikowski@cs.put.poznan.pl>  Fri, 15 Aug 2014 18:47:45 +0200
+
+libircclient (1.3+dfsg1-3) unstable; urgency=low
+
+  * Add quilt patch system.
+  * debian/patches:
+    - 00_fix_missing_headers.diff - Add missing includes. Closes: #534898.
+
+ -- Bradley Smith <bradsmith@debian.org>  Sun, 28 Jun 2009 13:58:40 +0100
+
+libircclient (1.3+dfsg1-2) unstable; urgency=low
+
+  * Add missing header file. Closes: #534798.
+  * Update Standards-Version to 3.8.2. (No changes).
+
+ -- Bradley Smith <bradsmith@debian.org>  Sat, 27 Jun 2009 12:22:50 +0100
+
+libircclient (1.3+dfsg1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Bradley Smith <bradsmith@debian.org>  Mon, 05 Jan 2009 22:46:15 +0000
+
+libircclient (1.2+dfsg1-1) unstable; urgency=low
+
+  * Initial release. Closes: #498179.
+
+ -- Bradley Smith <bradsmith@debian.org>  Sun, 26 Oct 2008 12:34:32 +0000

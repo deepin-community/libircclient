@@ -1,0 +1,14 @@
+Author: null_ptr <rhannek@gmx.de>
+Description: fix ipv6 in libircclient
+Forwarded: http://sourceforge.net/p/libircclient/bugs/24/
+--- a/src/libircclient.c
++++ b/src/libircclient.c
+@@ -852,7 +852,7 @@
+ 		if (saddr.ss_family == AF_INET)
+ 			memcpy (&session->local_addr, &((struct sockaddr_in *)&laddr)->sin_addr, sizeof(struct in_addr));
+ 		else
+-			memcpy (&session->local_addr, &((struct sockaddr_in6 *)&laddr)->sin6_addr, sizeof(struct in6_addr));
++			memcpy (&session->local_addr6, &((struct sockaddr_in6 *)&laddr)->sin6_addr, sizeof(struct in6_addr));
+ 
+ #if defined (ENABLE_DEBUG)
+ 		if ( IS_DEBUG_ENABLED(session) )

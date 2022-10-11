@@ -1,0 +1,3 @@
+usr/include/*
+usr/lib/*/libircclient.a
+usr/lib/*/libircclient.so

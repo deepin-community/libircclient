@@ -1,0 +1,59 @@
+Source: libircclient
+Priority: optional
+Maintainer: Dariusz Dwornikowski <darek@debian.org>
+Build-Depends: debhelper (>= 9), dh-autoreconf
+Standards-Version: 3.9.8
+Section: libs
+Homepage: http://www.ulduzsoft.com/libircclient/
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/libircclient.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/libircclient.git
+
+Package: libircclient-dev
+Section: libdevel
+Architecture: any
+Depends: libircclient1 (= ${binary:Version}), ${misc:Depends}
+Description: development files for libircclient
+ libircclient is a small but powerful library that implements the
+ client-server IRC protocol. It is designed to be small, fast, portable and
+ compatible to RFC standards, and most IRC clients. libircclient features
+ include:
+ .
+  * Full multi-threading support.
+  * Single threads handles all the IRC processing.
+  * Support for single-threaded applications, and socket-based
+    applications, which use select()
+  * Synchronous and asynchronous interfaces.
+  * CTCP support with optional build-in reply code.
+  * Flexible DCC support, including both DCC chat, and DCC file transfer.
+  * Can both initiate and react to initiated DCC.
+  * Can accept or decline DCC sessions asynchronously.
+  * Plain C interface and implementation (possible to use from C++ code,
+    obviously)
+  * Compatible with RFC 1459 and most IRC clients.
+  * Good documentation and examples available.
+ .
+ This package contains the development files.
+
+Package: libircclient1
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C library to create IRC clients
+ libircclient is a small but powerful library that implements the
+ client-server IRC protocol. It is designed to be small, fast, portable and
+ compatible to RFC standards, and most IRC clients. libircclient features
+ include:
+ .
+  * Full multi-threading support.
+  * Single threads handles all the IRC processing.
+  * Support for single-threaded applications, and socket-based applications,
+    which use select()
+  * Synchronous and asynchronous interfaces.
+  * CTCP support with optional build-in reply code.
+  * Flexible DCC support, including both DCC chat, and DCC file transfer.
+  * Can both initiate and react to initiated DCC.
+  * Can accept or decline DCC sessions asynchronously.
+  * Plain C interface and implementation (possible to use from C++ code,
+    obviously)
+  * Compatible with RFC 1459 and most IRC clients.
+  * Good documentation and examples available.
